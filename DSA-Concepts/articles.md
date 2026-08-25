@@ -1,6 +1,6 @@
 # Check out articles of my Hashnode account:
-- Time Complexity: https://arijitkundu.hashnode.dev/everything-about-time-complexity
-- Singly Linked List: https://arijitkundu.hashnode.dev/
+- https://arijitkundu.hashnode.dev/
 
 ## The articles in sequence 
-1. https://arijitkundu.hashnode.dev/singly-linked-list
+0. Time Complexity: https://arijitkundu.hashnode.dev/everything-about-time-complexity
+1. Singly Linked List: https://arijitkundu.hashnode.dev/singly-linked-list
