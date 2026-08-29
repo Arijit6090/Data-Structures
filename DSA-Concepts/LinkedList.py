@@ -18,7 +18,7 @@ class SinglyLinkedList:
                 t1 = t1.next
             t1.next = temp
         else: 
-            self.head = temp
+            self.head = temp # if the list is empty
 
     # Function to insert a new node at the beginning of the linked list. It takes a value as input, creates a new node with that value, and sets it as the new head of the linked list. The next attribute of the new node points to the previous head node.
     def insertAtBeginning(self, value):
@@ -30,30 +30,39 @@ class SinglyLinkedList:
     def insertInMiddle(self, value, position):
         temp = Node(value)
         t1 = self.head
-        while(t1.next != None):
+        while(t1 != None): # can be t1.next != None
             if(t1.data == position):
                 temp.next = t1.next
                 t1.next = temp
+                return
             t1 = t1.next
 
     # Function to delete a node from the linked list. It takes a value as input and removes the first occurrence of that value from the linked list. If the value is not found, no changes are made to the linked list.
     def deleteLL(self, value):
+        if(self.head == None):
+            print("The list is already empty")
+            return
         t1 = self.head
         prev = t1
         if(t1.data == value):
             self.head = t1.next
-        while(t1.next != None):
+            return
+        while(t1 != None): # can be t1.next != None
             if(t1.data == value):
                 prev.next = t1.next
-                break
-            else:
-                prev = t1
-                t1 = t1.next
-        if(t1.data == value):
-            prev.next = None
+                return
+            
+            prev = t1
+            t1 = t1.next
+        # if the while condition is t1.next != None then 
+        # if(t1.data == value):
+        #   prev.next = None
 
     # Function to print the linked list. It traverses the linked list starting from the head and prints the data of each node followed by an arrow (->) to indicate the link to the next node. When it reaches the end of the linked list, it prints "None" to indicate that there are no more nodes.
     def printLL(self):
+        if(self.head == None):
+            print("Linked List is empty")
+            return
         t1 = self.head
         while(t1.next != None):
             print(t1.data, end = " -> ")
