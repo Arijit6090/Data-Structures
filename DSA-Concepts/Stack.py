@@ -37,3 +37,16 @@ class Stack:
             print("The stack is empty")
             return
         return self.s.pop()
+
+# Test Cases:
+stack = Stack()
+
+stack.Push(10)
+stack.Push(20)
+stack.Push(30)
+
+print(stack.Peek())
+
+print(stack.Pop())
+
+print(stack.Peek())
