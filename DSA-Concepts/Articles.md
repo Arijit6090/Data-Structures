@@ -9,3 +9,4 @@
 4. Doubly Linked List: https://arijitkundu.hashnode.dev/doubly-linked-list
 5. Circular Linked Lists (Doubly and Singly): https://arijitkundu.hashnode.dev/circular-linked-list-in-python-singly-and-doubly-circular-linked-lists
 6. Queue and Deque: https://arijitkundu.hashnode.dev/queue-and-deque-in-dsa-understanding-fifo-with-python-and-c
+7. Circular Queue: https://arijitkundu.hashnode.dev/circular-queue
