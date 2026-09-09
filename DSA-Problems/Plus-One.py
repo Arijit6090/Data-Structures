@@ -35,16 +35,12 @@
 class Solution:
     def plusOne(self, digits):
         # Your implementation here
-        if len(digits) == 0:
-            return None
-        result = int("".join(map(str, digits)))
-        new_digits = []
-        if digits[0] == 0 or result == 0:
-            new_digits = [1, 0]
-        else:
-            result += 1
-            while result > 0:
-                new_digits.append(result%10)
-                result = result // 10
-        new_digits.reverse()
-        return new_digits
+        # start from right, go till the previous index of -1 in the left, and with stepping 1 from right to left
+        for i in range(len(digits) - 1, -1, -1):
+            if digits[i] < 9:
+                digits[i] += 1
+                return digits
+
+            digits[i] = 0
+
+        return [1] + digits
