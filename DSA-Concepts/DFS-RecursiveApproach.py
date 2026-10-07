@@ -16,20 +16,34 @@ class Graph:
             print(" ".join(map(str,row)))
 
     # DFS
+    # def dfs(self, src):
+    #     visited = [False]*self.size
+    #     stack = [src]
+    #     while(stack):
+    #         # v as vertex
+    #         v = stack.pop()
+
+    #         if visited[v] == False:
+    #             print(v,end=" -> ")
+    #             visited[v] = True
+
+    #         for i in range(self.size):
+    #             if self.mat[v][i] == 1 and visited[i] == False:
+    #                 stack.append(i)
+
+    # DFS Recursive:
     def dfs(self, src):
         visited = [False]*self.size
-        stack = [src]
-        while(stack):
-            # v as vertex
-            v = stack.pop()
-
-            if visited[v] == False:
-                print(v,end=" -> ")
-                visited[v] = True
+        # recursive
+        def dfs_recursive(v): # v => vertex
+            visited[v] = True
+            print(v,end=" -> ")
 
             for i in range(self.size):
                 if self.mat[v][i] == 1 and visited[i] == False:
-                    stack.append(i)
+                    dfs_recursive(i)
+                    
+        dfs_recursive(src)
 
 G = Graph(5)
 
