@@ -11,26 +11,6 @@ class Graph:
         else: 
             print("Invalid Edge")
 
-    def print_graph(self):
-        for row in self.mat:
-            print(" ".join(map(str,row)))
-
-    # DFS
-    # def dfs(self, src):
-    #     visited = [False]*self.size
-    #     stack = [src]
-    #     while(stack):
-    #         # v as vertex
-    #         v = stack.pop()
-
-    #         if visited[v] == False:
-    #             print(v,end=" -> ")
-    #             visited[v] = True
-
-    #         for i in range(self.size):
-    #             if self.mat[v][i] == 1 and visited[i] == False:
-    #                 stack.append(i)
-
     # DFS Recursive:
     def dfs(self, src):
         visited = [False]*self.size
