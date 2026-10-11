@@ -22,9 +22,9 @@ def partition(arr, l, r):
             j -= 1
         else:
             break
-    arr[l],arr[j] = arr[j],arr[l] # from here you can use j instead of i aswell because both pointing at the same location
+    arr[l],arr[j] = arr[j],arr[l] 
     return j
 
-arr = [21,31,21,12,0,78,98,1]
+arr = [15,5,20]
 quick_sort(arr, 0, len(arr) - 1)
 print(arr)
