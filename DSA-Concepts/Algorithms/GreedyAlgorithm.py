@@ -28,8 +28,28 @@ def greedy_min(a):
         j += 2
     return abs_min_sum
 
+# in one function with another approach:
+def max_min_diff(arr):
+    arr.sort()
+    n = len(arr)
+    mid = n//2
+    sum_max = 0
+    sum_min = 0
+    j = n-1
+    for i in range(mid):
+        sum_max += abs(a[i]-a[j])
+        sum_min += abs(a[2*i]-a[2*i + 1])
+        j -= 1
+    print("Max Difference =>", sum_max)
+    print("Min Difference =>", sum_min)
+
 a = [12, 5, 25, 10, 2, 15, 8, 30]
+
+print("\n----Approach 1----\n")
 max_sum = greedy_max(a)
 print(max_sum) # 57
 min_sum = greedy_min(a)
 print(min_sum) # 13
+
+print("\n----Approach 2----\n")
+max_min_diff(a)
